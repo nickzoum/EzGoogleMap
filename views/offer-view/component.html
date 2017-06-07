@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Offer Map View</title>
+    <base target="_blank" />
+    <meta name="viewport" content="initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <div class="thumb">
+        <a nz-link="link">        
+            <img nz-src="thumb" onerror="this.parentElement.className = 'default'">
+        </a>
+    </div>
+    <div class="descr">
+        <a class="title" nz-link="link">{apartment} {area}m<span class=" power ">2</span> For {sale}</a>
+        <span class="location ">{location}</span>
+        <span class="price ">{price}</span>
+        <a nz-link="link" class="more ">{more}</a>
+    </div>
+</body>
+
+</html>
