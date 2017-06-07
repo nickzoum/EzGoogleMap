@@ -675,12 +675,7 @@
                     zoom = Functions.round(zoom, 0);
                     latitude = Functions.round(latitude, 5);
                     longitude = Functions.round(longitude, 5);
-                    var object = getHttpObject({
-                        latitude: latitude,
-                        longitude: longitude,
-                        zoom: 0,
-                        range: zoom
-                    });
+                    var object = getHttpObject(latitude, longitude, 0, zoom);
                     var data = typeof object === "string" ? object : JSON.stringify(object);
                     getData(url, data).then(onDataLoad).catch(showBadRequest);
                 }
@@ -698,10 +693,10 @@
 
         /**
          * @typedef {Object} MapController
-         * @prop {function({latitude: number, longitude: number, range: number, zoom: number}): object} getHttpObject
+         * @prop {function(number, number, number, number): object} getHttpObject
          * @prop {boolean} clustering 
          * @prop {object} modelType
-         * @prop {function(object, function(): void, function(): void): void} onNewPin
+         * @prop {function(object, function, function): void} onNewPin
          * @prop {boolean} withPost
          * @prop {string} url
          */

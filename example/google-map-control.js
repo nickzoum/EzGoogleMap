@@ -47,7 +47,7 @@ return{zoomToRange:zoomToRange,appendChild:appendChild,addCluster:addCluster,cle
 catch(err){console.error(err)}}},function(){onNewViewRendered();if(typeof onFinish==="function"){try{onFinish()}
 catch(err){console.error(err)}}})}},delay)}
 function showBadRequest(err){console.error(err);MapHelper.stopLoad();isLoading=!1}
-function onReload(latitude,longitude,zoom){if(canMove){if(!isLoading){isLoading=!0;MapHelper.startLoad();zoom=Functions.round(zoom,0);latitude=Functions.round(latitude,5);longitude=Functions.round(longitude,5);var object=getHttpObject({latitude:latitude,longitude:longitude,zoom:0,range:zoom});var data=typeof object==="string"?object:JSON.stringify(object);getData(url,data).then(onDataLoad).catch(showBadRequest)}}
+function onReload(latitude,longitude,zoom){if(canMove){if(!isLoading){isLoading=!0;MapHelper.startLoad();zoom=Functions.round(zoom,0);latitude=Functions.round(latitude,5);longitude=Functions.round(longitude,5);var object=getHttpObject(latitude,longitude,0,zoom);var data=typeof object==="string"?object:JSON.stringify(object);getData(url,data).then(onDataLoad).catch(showBadRequest)}}
 canMove=!0}
 function onNewViewLoaded(){canMove=!1}
 function onNewViewRendered(){setTimeout(function(){canMove=!0},500)}

@@ -4,13 +4,6 @@
     MapController.onNewPin = onNewPin;
     MapController.withPost = true;
 
-    /**
-     * Implementation of the onNewPin function
-     * @param {Array<object>} model 
-     * @param {function(number, number, string, string, number): void} addPin 
-     * @param {function(string, object): string} createView
-     * @returns {void}
-     */
     function onNewPin(model, addPin, createView) {
         for (var item of model) {
             var parseModel = {
@@ -27,17 +20,12 @@
         }
     }
 
-    /**
-     * Implementation of the getHttpObject function
-     * @param {{latitude: number, longitude: number, range: number, zoom: number}} input
-     * @returns {{lng: number, lat: number, range: number, zoom: number}}
-     */
-    function getHttpObject(input) {
+    function getHttpObject(latitude, longitude, range, zoom) {
         return {
-            lng: input.longitude,
-            lat: input.latitude,
-            range: input.range,
-            zoom: input.zoom
+            lng: longitude,
+            lat: latitude,
+            range: range,
+            zoom: zoom
         };
     }
 })();

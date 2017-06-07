@@ -12,7 +12,7 @@
 
 ## Intro
 
-You can also see how the code works under in the example folder
+You can also see how the code works under in the <a href="https://github.com/nickzoum/EzGoogleMap/tree/master/example">example folder</a>
 
 ## What's included
 
@@ -40,7 +40,7 @@ Then there are the minified `google-map-control script` and `map style`
 
 ## Documentation
 
-By creating another script you have access to these properties of the map:
+These are the properties of the map that you can alter:
 
  - `getHttpObject`: function that gets the object to be sent with the HTTPRequest (required)
  - `clustering`: whether clustering should be used or not (default is true)
@@ -53,16 +53,19 @@ Function documentation:
 
 ```javascript
 /**
- * Gets the object to be sent with the HTTPRequest
- * @param {input: {latitude: number, longitude: number, range: number, zoom: number}} input - object showing the position of the viewport
+ * Gets the object to be sent with the HTTPRequest based on the viewport
+ * @param {number} latitude - latitude of map
+ * @param {number} longitude - longitude of map
+ * @param {number} range - radius of visible viewport in meters 
+ * @param {number} zoom - zoom level of map
  * @returns {object} - object to be sent
  */
-function getHttpObject(input: {latitude: number, longitude: number, range: number, zoom: number}): object
+function getHttpObject(latitude: number, longitude: number, range: number, zoom: number): object
 /**
  * Reloads the pins
  * @param {Array<object>} model - The list of models that represent each pin
- * @param {function(latitude: number, longitude: number, title: string, onClickHtml: string, max-width: number): void} addPin - see below
- * @param {function(url: string, model: object, onLoad: function(): void, onRender: function(): void): string} createView - see below
+ * @param {function} addPin - see below
+ * @param {function} createView - see below
  * @returns {void}
  */
 function onNewPin(model: Array<object>, addPin: function(): void, createView : function(): string): object
