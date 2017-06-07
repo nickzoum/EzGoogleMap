@@ -38,7 +38,7 @@ The `images` folder contains all the images required to show the `clusters` and 
 The `unminified` folder contains the properly formatted `script` and `style`
 Then there are the minified `google-map-control script` and `map style`
 
-#Documentation
+## Documentation
 
 By creating another script you have access to these properties of the map:
 
