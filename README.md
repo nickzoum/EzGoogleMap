@@ -1,5 +1,7 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/nickzoum/EzGoogleMap/master/example/favicon.ico" style="height: 128px; width: 128px;"/>
+  <div style="height: 128px; width: 128px;">
+    <img src="https://raw.githubusercontent.com/nickzoum/EzGoogleMap/master/example/favicon.ico" />
+  </div>
   <h3 align="center" >EzGoogleMap</h3>
   <p align="center">An easy google map plugin</p>
 </p>
@@ -9,10 +11,12 @@
 - [Intro](#intro)
 - [What's included](#whats-included)
 - [Documentation](#documentation)
+- [Using Views](#using-views)
 
 ## Intro
 
-You can also see how the code works under in the <a href="https://github.com/nickzoum/EzGoogleMap/tree/master/example">example folder</a>
+This is a simple javascript & css plugin that allows you to more easily use google maps markers 
+You can also see how the code works under in the <a href="https://github.com/nickzoum/EzGoogleMap/tree/master/example" target="_blank">example folder</a>
 
 ## What's included
 
@@ -89,3 +93,14 @@ function createView(url: string, model: object, onLoad: function(): void, onRend
  */
 function addPin(latitude: number, longitude: number, title: string, onClickHtml: string, max-width: number): void
 ```
+
+## Using Views
+
+You can write simple html and using these 4 ways you can add basic text or links to the dom
+
+ - `nz-text`: sets the textContent | value depending on the type of element
+ - `nz-link`: sets the href attribute
+ - `nz-src`: sets the src attribute
+ - `interpolation`: using simple brackets replaces the text in the bracket 
+
+See example <a href="https://github.com/nickzoum/EzGoogleMap/blob/master/example/views/offer-view/component.html" target="_blank">here</a>
