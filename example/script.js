@@ -64,7 +64,6 @@
     function onNewPin(model, addPin, createView) {
         for (var item of model) {
             var parseModel = {
-                link: "http://realclient.ethesis.eu//Reoffer/Index/" + String(item.Title).replace(/ /g, "_") + "/" + item.OfferId + "/" + item.OfferCategory[0],
                 thumb: "data:image/jpg;base64," + item.FeaturedImage,
                 apartment: item.PropertySubCategory,
                 location: item.PropertyLocation,
