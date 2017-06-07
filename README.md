@@ -1,7 +1,5 @@
 <p align="center">
-  <div style="height: 128px; width: 128px;">
-    <img src="https://raw.githubusercontent.com/nickzoum/EzGoogleMap/master/example/favicon.ico" />
-  </div>
+  <img src="https://raw.githubusercontent.com/nickzoum/EzGoogleMap/master/example/favicon.ico" />
   <h3 align="center" >EzGoogleMap</h3>
   <p align="center">An easy google map plugin</p>
 </p>
