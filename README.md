@@ -51,7 +51,7 @@ By creating another script you have access to these properties of the map:
 
 Function documentation:
 
-```
+```javascript
 /**
  * Gets the object to be sent with the HTTPRequest
  * @param {input: {latitude: number, longitude: number, range: number, zoom: number}} input - object showing the position of the viewport
