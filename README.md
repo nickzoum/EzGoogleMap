@@ -13,7 +13,7 @@
 
 ## Intro
 
-This is a simple javascript & css plugin that allows you to more easily use google maps markers 
+This is a simple javascript & css plugin that allows you to more easily use google maps markers.
 You can also see how the code works under in the <a href="https://github.com/nickzoum/EzGoogleMap/tree/master/example" target="_blank">example folder</a>
 
 ## What's included
